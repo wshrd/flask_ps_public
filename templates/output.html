@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Output</title>
+    <style>
+        body {
+            background-color: black; /* Черный фон */
+            color: lightblue; /* Голубой текст */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        textarea {
+            width: 200%;
+            height: 300px;
+            padding: 10px;
+            border: 1px solid white;
+            background-color: transparent;
+            color: lightblue; /* Голубой текст */
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p>Mail export status:</p>
+        <textarea readonly>{{ output|safe }}</textarea>
+    </form>
+</body>
+</html>

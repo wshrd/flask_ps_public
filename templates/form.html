@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+    <style>
+        body {
+            background-color: black; /* Черный фон */
+            color: lightblue; /* Голубой текст */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input[type="text"], input[type="submit"] {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <label for="mailbox">Mail Box alias:</label><br>
+        <input type="text" id="mailbox" name="mailbox"><br>
+        <input type="submit" value="Start Mailbox Export">
+        <input type="submit" formaction="/check" value="Check Export Status">
+        <p>Current user: {{ session.username }}</p>
+        <input type="submit" formaction="/logout" value="Exit">
+    </form>
+</body>
+</html>
